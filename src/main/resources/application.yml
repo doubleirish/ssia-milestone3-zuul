@@ -1,0 +1,16 @@
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    httpbin:
+      path: /httpbin/**
+      url: http://httpbin.org:80/
+    myresourceprofile:
+      path: /api/**
+      url: http://localhost:7070/  
+    myoath:
+      path: /oauth/**
+      url: http://localhost:9191/oauth 
+
+#  maps http://gateway:8080/profile/** to http://resource:7070/profile
+#    path: /profile/** 
+#    url: http://localhost:7070/profiles
